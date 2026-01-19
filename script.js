@@ -12,7 +12,7 @@ accounts[0] = {
     balance: 290000
 }
 accounts[1] = {
-    name: "Hasan Ahmed",
+    name: "Prarthana Wagle",
     balance: 1000
 }
 let userName = document.querySelector(".accountName h1")
