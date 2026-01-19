@@ -5,6 +5,20 @@
 
 //     alert("GHello")
 // })
+
+let accounts = []
+accounts[0] = {
+    name: "Mahin Ahmed",
+    balance: 290000
+}
+accounts[1] = {
+    name: "Hasan Ahmed",
+    balance: 1000
+}
+let userName = document.querySelector(".accountName h1")
+let user = {};
+let balance = 0;
+
 let loginScreen = document.querySelector(".loginForm");
 let dashboardScreen = document.querySelector(".accountWindow");
 document.querySelector("#firstForm").addEventListener("submit", function (event) {
@@ -15,7 +29,28 @@ document.querySelector("#firstForm").addEventListener("submit", function (event)
     if (inputEmail == 1) {
         loginScreen.classList.add("toggle");
         dashboardScreen.classList.remove("toggle");
-    } else {
+        user = accounts[0];
+        balance = user.balance;
+        userName.innerText = user.name
+        balanceScreen.innerText = balance;
+        document.querySelector("#deposit").value = 0;
+
+    } else if (inputEmail == 1050) {
+        loginScreen.classList.add("toggle");
+        dashboardScreen.classList.remove("toggle");
+        user = accounts[1];
+        balance = user.balance;
+        userName.innerText = user.name
+        balanceScreen.innerText = balance;
+        document.querySelector("#deposit").value = 0;
+
+
+
+
+    }
+
+
+    else {
 
         // let warning = document.createElement("p");
         // warning.innerHTML = "<span style='color:red;margin-left:1rem'>invalid password<br></span>";
@@ -26,21 +61,16 @@ document.querySelector("#firstForm").addEventListener("submit", function (event)
 
     }
 })
-document.querySelector("#logOutBtn").addEventListener("click", function (event) {
-    event.preventDefault();
-    loginScreen.classList.remove("toggle");
-    dashboardScreen.classList.add("toggle");
-})
-
 
 
 
 
 let deposited = 0;
-let balance = 0;
+
 let withdrawn = 0;
 let depositScreen = document.querySelector(".box-2 h3 span");
 let balanceScreen = document.querySelector(".box-1 h3 span");
+
 let withdrawScreen = document.querySelector(".box-3 h3 span");
 let depositInvalid = document.querySelector("#depositInvalid");
 let withdrawInvalid = document.querySelector("#withdrawInvalid");
@@ -80,3 +110,14 @@ document.querySelector("#withdrawForm").addEventListener("submit", function (eve
     }
 
 })
+
+
+
+
+document.querySelector("#logOutBtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    loginScreen.classList.remove("toggle");
+    dashboardScreen.classList.add("toggle");
+})
+
+
