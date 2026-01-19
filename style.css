@@ -132,6 +132,25 @@
     color: red
 }
 
+#withdrawInvalid {
+    margin: 0.2rem 1rem;
+    color: red
+}
+
+.loginSection {
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    justify-content: end;
+    margin-top: 2rem;
+}
+
+#logOutBtn {
+    width: fit-content;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
 .toggle {
     display: none;
 }

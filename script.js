@@ -26,7 +26,11 @@ document.querySelector("#firstForm").addEventListener("submit", function (event)
 
     }
 })
-
+document.querySelector("#logOutBtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    loginScreen.classList.remove("toggle");
+    dashboardScreen.classList.add("toggle");
+})
 
 
 
@@ -46,6 +50,7 @@ document.querySelector("#depositForm").addEventListener("submit", function (even
     let depositAmount = document.querySelector("#deposit").value;
 
     if (depositAmount > 0) {
+        depositInvalid.innerHTML = "";
         depositScreen.innerText = ""
         deposited += parseInt(depositAmount);
         balance += parseInt(depositAmount)
@@ -61,7 +66,8 @@ document.querySelector("#withdrawForm").addEventListener("submit", function (eve
 
     let withdrawAmount = document.querySelector("#withdraw").value;
 
-    if (withdrawAmount > 0) {
+    if (withdrawAmount > 0 && withdrawAmount <= balance) {
+        withdrawInvalid.innerHTML = "";
         withdrawScreen.innerText = ""
         withdrawn += parseInt(withdrawAmount);
         balance -= parseInt(withdrawAmount)
@@ -69,6 +75,8 @@ document.querySelector("#withdrawForm").addEventListener("submit", function (eve
         balanceScreen.innerText = balance
     } else if (withdrawAmount <= 0) {
         withdrawInvalid.innerHTML = "Invalid input";
+    } else if (withdrawAmount > balance) {
+        withdrawInvalid.innerHTML = "Insufficient Balance";
     }
 
 })
