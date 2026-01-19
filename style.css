@@ -38,6 +38,10 @@
     background: green;
 }
 
+.warning {
+    margin: 0.2rem 1rem;
+    color: red
+}
 
 
 /* boxxxxxx */
@@ -121,6 +125,11 @@
     background: green;
     color: white;
     border-radius: 10px;
+}
+
+#depositInvalid {
+    margin: 0.2rem 1rem;
+    color: red
 }
 
 .toggle {

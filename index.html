@@ -15,9 +15,10 @@
     <div class="loginForm">
         <div class="container">
             <div class="loginBox">
-                <form action="">
-                    <input type="text" name="" id="email" placeholder="Enter Your Email">
+                <form action="" id="firstForm">
+                    <input type="text" name="" id="email" placeholder="Enter Your Email" value=1>
                     <input type="password" name="" id="password" placeholder="Enter your Password">
+                    <span class="warning" style="display:block"><small></small></span>
                     <button type="submit">Login</button>
                 </form>
             </div>
@@ -29,17 +30,20 @@
                 <div class="row d-flex justify-content-around">
                     <div class="col-md-4">
                         <div class="box box-1">
-                            <h3>Balance: $</h3>
+                            <h3>Balance: $<span></span></h3>
+
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="box box-2">
-                            <h3>Deposit: $</h3>
+                            <h3>Deposit: $<span></span></h3>
+
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="box box-3">
-                            <h3>Withdraw: $</h3>
+                            <h3>Withdraw: $<span></span></h3>
+
                         </div>
                     </div>
                 </div>
@@ -48,18 +52,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 d-flex justify-content-center">
-                            <div class="inputBox">
+                            <form class="inputBox" id="depositForm">
                                 <h3>Deposit</h3>
-                                <input type="text" name="" id="" placeholder="$Amount">
-                                <button>Deposit</button>
-                            </div>
+                                <input type="text" name="" id="deposit" placeholder="$Amount">
+                                <span id="depositInvalid"></span>
+                                <button type="submit">Deposit</button>
+                            </form>
                         </div>
                         <div class="col-md-6 d-flex justify-content-center">
-                            <div class="inputBox">
+                            <form class="inputBox" id="withdrawForm">
                                 <h3>Withdraw</h3>
-                                <input type="text" name="" id="" placeholder="$Amount">
-                                <button>Withdraw</button>
-                            </div>
+                                <input type="text" name="" id="withdraw" placeholder="$Amount">
+                                <span id="withdrawInvalid"></span>
+                                <button type="submit">Withdraw</button>
+
+                            </form>
                         </div>
                     </div>
                 </div>
