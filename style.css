@@ -137,7 +137,7 @@
     color: red
 }
 
-.loginSection {
+.logOutSection {
     display: flex;
     /* background-color: red; */
     width: 100%;
@@ -149,6 +149,14 @@
     width: fit-content;
     margin-right: 1rem;
     border-radius: 10px;
+}
+
+.accountInfos table tr {
+    border: 1px solid black;
+}
+
+.accountInfos table td {
+    border: 1px solid black;
 }
 
 .toggle {
